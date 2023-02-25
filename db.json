@@ -1,0 +1,86 @@
+{
+  "tasks": [
+    {
+      "name": "a",
+      "status": 3,
+      "projectId": 3,
+      "id": 4
+    },
+    {
+      "name": "ss",
+      "status": 3,
+      "projectId": 3,
+      "id": 6
+    },
+    {
+      "name": "takks",
+      "status": 2,
+      "projectId": 4,
+      "id": 7
+    }
+  ],
+  "status": [
+    {
+      "taskID": 1,
+      "name": "task1"
+    },
+    {
+      "taskID": 2,
+      "name": "task2"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Dự án tốt nghiệp",
+      "start": "2023-02-23",
+      "teamSize": 3,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/220px-Image_created_with_a_mobile_phone.png",
+      "id": 3
+    },
+    {
+      "name": "pro",
+      "start": "2023-02-24",
+      "teamSize": 3,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/220px-Image_created_with_a_mobile_phone.png",
+      "id": 4
+    }
+  ],
+  "users": [
+    {
+      "email": "viet1@gmail.com",
+      "password": "$2a$10$Pr3kNRF49z10I6WbTt.xvuwJwUzOPjKdHlqie8dlD177DwFUGayyG",
+      "name": "Nguyễn Thị Thương",
+      "id": 6,
+      "role": 1
+    },
+    {
+      "email": "viet2@gmail.com",
+      "password": "$2a$10$x.sY3VfT5AlUxwWbvDqTP.PZPps/DP0veeCam9j/gl41bcjJN3dKm",
+      "role": 2,
+      "name": "nhân viên",
+      "id": 7
+    },
+    {
+      "email": "viet2@gmail.com",
+      "password": "$2a$10$x.sY3VfT5AlUxwWbvDqTP.PZPps/DP0veeCam9j/gl41bcjJN3dKm",
+      "role": 1,
+      "name": "viet",
+      "id": 7
+    },
+    {
+      "email": "viet@gmail.com",
+      "password": "$2a$10$37jOFF907II8Qa.nqTdT6.rfNMWvtQEjoKf1rWH3vjzUyAUK4whkW",
+      "name": "Nguyễn Quang C",
+      "id": 10,
+      "role": 2,
+      "projectId": 3
+    },
+    {
+      "email": "viet2d@gmail.com",
+      "password": "$2a$10$2wGpj4lU/SJBXey6lk8CfugAdAWdrzm1tEkTeeKISpPiUB6NegE.2",
+      "role": 1,
+      "name": "dd",
+      "id": 11
+    }
+  ]
+}

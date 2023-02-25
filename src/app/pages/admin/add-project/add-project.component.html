@@ -1,0 +1,42 @@
+<!-- This is an example component -->
+
+<div class="max-w-2xl mx-auto">
+    <h1 class="py-[40px] text-[20px] font-medium">ADD NEW PROJECT</h1>
+	<div class="mb-6">
+		<label for="username-success" class="block mb-2 text-sm font-medium text-green-700 dark:text-green-500">PROJECT NAME</label>
+		<input [(ngModel)]="name" type="text" id="username-success" class="bg-green-50 border border-green-500 text-green-900 placeholder-green-700 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-green-100 dark:border-green-400" placeholder="Project name">
+		<p class="mt-2 text-sm text-green-600 dark:text-green-500"><span class="font-medium">Alright!</span> Username
+			available!</p>
+	</div>
+	<div>
+		<label for="username-error" class="block mb-2 text-sm font-medium text-green-700 dark:text-green-500">Date of Start</label>
+		<input [(ngModel)]="start" type="date" id="username-error" class="bg-green-50 border border-green-500 text-green-900 placeholder-green-700 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-green-100 dark:border-green-400" >
+		<p class="mt-2 text-sm text-green-600 dark:text-green-500"><span class="font-medium">Oops!</span> Username already
+			taken!</p>
+	</div>
+    <div class="my-6">
+		<label for="username-success" class="block mb-2 text-sm font-medium text-green-700 dark:text-green-500">TEAM SIZE</label>
+		<input [(ngModel)]="teamSize" type="number" id="username-success" class="bg-green-50 border border-green-500 text-green-900 placeholder-green-700 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-green-100 dark:border-green-400" placeholder="Project name">
+		<p class="mt-2 text-sm text-green-600 dark:text-green-500"><span class="font-medium">Alright!</span> Username
+			available!</p>
+	</div>
+	<div class="my-6">
+		<label for="username-success" class="block mb-2 text-sm font-medium text-green-700 dark:text-green-500">TEAM SIZE</label>
+		<input [(ngModel)]="image" type="file" id="username-success" class="bg-green-50 border border-green-500 text-green-900 placeholder-green-700 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-green-100 dark:border-green-400" placeholder="Project name">
+		<p class="mt-2 text-sm text-green-600 dark:text-green-500"><span class="font-medium">Alright!</span> Username
+			available!</p>
+	</div>
+
+	<!-- <p class="mt-5">This form component is part of a larger, open-source library of Tailwind CSS components. Learn more
+		by going to the official <a class="text-blue-600 hover:underline"
+			href="#" target="_blank">Flowbite Documentation</a>.
+	</p> -->
+   
+        <div class="py-[40px]">
+            <button (click)="onHandleAdd()" class="group  relative h-12 w-48 overflow-hidden rounded-lg bg-white text-lg shadow">
+                <div class="absolute inset-0 w-3 bg-green-400 transition-all duration-[250ms] ease-out group-hover:w-full"></div>
+                <span class="relative text-black group-hover:text-white">SUBMIT!</span>
+              </button>
+        </div>
+     
+</div>

@@ -1,0 +1,90 @@
+<div class="flex flex-col">
+  <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+    <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
+      <div style="display: flex; margin-left: 40px;">
+        <p>Các Thành viên :</p>
+        <select id="author_id" name="author_name" style="border-color:red ;margin-left: 40px;">
+          <option *ngFor="let item of listUser" value="{{item.name}}">{{item.name}}</option>
+        </select>
+      </div>
+      <div class="overflow-hidden flex justify-start mt-[30px] " cdkDropListGroup>
+        <table cdkDropList [cdkDropListData]="todo" (cdkDropListDropped)="drop($event)"
+          class="w-[300px] border-solid border-2 border-sky-500 ml-[20px] mr-[20px] text-center">
+          <thead class="border-x divide-x bg-gray-400">
+            <tr>
+              <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4">
+                To do
+              </th>
+
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of todo" cdkDrag (cdkDragStarted)="onDragStarted(item)" class="border-b divide-x">
+              <td *ngIf="item.name !==1" class="text-sm text-gray-900 font-medium px-6 py-4 whitespace-nowrap">
+                {{item.name}}
+              </td>
+            </tr>
+            <td class="text-sm text-gray-900 font-medium px-6 py-4 whitespace-nowrap">
+              <button (click)="showItask()"
+                class=" add-task bg-grey-light hover:bg-grey text-grey-darkest font-bold py-2 px-4 rounded inline-flex items-center">
+                <i class="fa-solid fa-plus"></i>
+                <span>Add a card</span>
+
+              </button>
+              <button (click)="addTask()"
+                class=" add-task bg-grey-light hover:bg-grey text-grey-darkest font-bold py-2 px-4 rounded inline-flex items-center">
+                <span>Submit</span>
+
+              </button>
+              <input [style.display]="showInAdd" [(ngModel)]="taskInput"
+                class="hidden appearance-none block w-full bg-white text-gray-700 border border-gray-200 rounded py-2 px-4 leading-tight focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500"
+                type="text">
+            </td>
+          </tbody>
+        </table>
+        <table cdkDropList [cdkDropListData]="doing" (cdkDropListDropped)="drop($event)"
+          class="w-[300px] border-solid border-2 border-sky-500 mx-[20px] text-center">
+          <thead class="border-b divide-x bg-gray-400">
+            <tr>
+
+              <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4">
+                Doing
+              </th>
+
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of doing" cdkDrag (cdkDragStarted)="onDragStarted(item)" class="border-b divide-x">
+              <td *ngIf="item.name !==2" class="text-sm text-gray-900 font-medium px-6 py-4 whitespace-nowrap">
+                {{item.name}}
+              </td>
+
+            </tr>
+
+          </tbody>
+        </table>
+        <table cdkDropList [cdkDropListData]="done" (cdkDropListDropped)="drop($event)"
+          class="w-[300px] border-solid border-2 border-sky-500 mx-[20px] text-center">
+          <thead class="border-b divide-x bg-gray-400">
+            <tr>
+
+              <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4">
+                Doing
+              </th>
+
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of done" cdkDrag (cdkDragStarted)="onDragStarted(item)" class="border-b divide-x">
+              <td *ngIf="item.name !==3" class="text-sm text-gray-900 font-medium px-6 py-4 whitespace-nowrap">
+                {{item.name }}
+              </td>
+
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
